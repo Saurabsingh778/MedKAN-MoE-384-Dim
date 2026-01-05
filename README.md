@@ -56,6 +56,8 @@ Input Text → [Embedding] → [Router] → [Top-K Experts] → [Weighted Aggreg
 
 The KAN-based architecture leverages **learnable B-spline activation functions** to achieve superior parameter efficiency.
 
+![MoE-KAN Architecture Overview](https://github.com/Saurabsingh778/MedKAN-MoE-384-Dim/blob/main/architecture%20images/kan-arc-img-I.png)
+
 #### KAN Expert Architecture
 
 Each KAN expert consists of **EfficientKANLinear** layers with the following structure:
@@ -65,6 +67,8 @@ Input (384) → KANLinear(384→256) → KANLinear(256→128) → Linear(128→1
               ├─ Base: SiLU(x) · W_base
               └─ Spline: B-spline(x) · W_spline
 ```
+
+![KAN Architecture Details](https://github.com/Saurabsingh778/MedKAN-MoE-384-Dim/blob/main/architecture%20images/kan-arc-img-II.png)
 
 **Key Components:**
 
@@ -123,6 +127,8 @@ Router: Linear(384→128) → LeakyReLU → Linear(128→32) → Softmax + Top-K
 
 The MLP baseline uses standard deep neural networks with batch normalization for stability.
 
+![MoE-MLP Architecture Overview](https://github.com/Saurabsingh778/MedKAN-MoE-384-Dim/blob/main/architecture%20images/mlp-arc-img-1.png)
+
 #### MLP Expert Architecture
 
 ```python
@@ -131,6 +137,8 @@ Input (384) → Linear(384→512) → BatchNorm → ReLU
             → Linear(512→256) → ReLU
             → Linear(256→19,756)
 ```
+
+![MLP Architecture Details](https://github.com/Saurabsingh778/MedKAN-MoE-384-Dim/blob/main/architecture%20images/mlp-arc-img-II.png)
 
 **Key Components:**
 
@@ -197,6 +205,8 @@ Both expert types operate under **identical MoE routing and training conditions*
 
 Benchmarks were conducted on **10,000 randomized clinical samples** using identical routing, batching, and evaluation protocols.
 
+![Comprehensive Comparison Results](https://github.com/Saurabsingh778/MedKAN-MoE-384-Dim/blob/main/results/Figure_1.png)
+
 ### Summary of Key Findings
 
 | Evaluation Metric | MoE-KAN (Proposed) | MoE-MLP (Baseline) | Research Insight |
@@ -211,6 +221,7 @@ Benchmarks were conducted on **10,000 randomized clinical samples** using identi
 
 ### Detailed Performance Breakdown
 
+![Additional Performance Metrics](https://github.com/Saurabsingh778/MedKAN-MoE-384-Dim/blob/main/results/Figure_2.png)
 
 #### Computational Efficiency
 
