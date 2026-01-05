@@ -278,7 +278,7 @@ If you use this work in your research, please cite:
   title={MedKAN-MoE: High-Efficiency Mixture of Experts for ICD-10 Coding},
   author={[Your Name]},
   year={2025},
-  url={https://github.com/yourusername/MedKAN-MoE}
+  url={https://github.com/Saurabsingh778/MedKAN-MoE}
 }
 ```
 
