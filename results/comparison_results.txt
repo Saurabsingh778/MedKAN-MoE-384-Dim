@@ -1,0 +1,64 @@
+================================================================================
+DETAILED MODEL COMPARISON RESULTS
+================================================================================
+
+KAN RESULTS:
+  model_type: KAN
+  accuracy: 0.9673
+  precision_macro: 0.9704234510985087
+  precision_weighted: 0.9707126431025905
+  recall_macro: 0.9700577942782975
+  recall_weighted: 0.9673
+  f1_macro: 0.9683978044744509
+  f1_weighted: 0.9663479281437373
+  total_inference_time: 4.1924214363098145
+  avg_batch_time: 0.8346584796905517
+  std_batch_time: 0.07671597593170998
+  throughput_samples_per_sec: 2385.256385102839
+  latency_per_sample_ms: 0.41924214363098145
+  initial_memory_mb: 12.5791015625
+  peak_memory_mb: 37.53125
+  avg_memory_mb: 36.052734375
+  memory_overhead_mb: 24.9521484375
+  num_active_experts: 32
+
+================================================================================
+
+MLP RESULTS:
+  model_type: MLP
+  accuracy: 0.9813
+  precision_macro: 0.9681346764652533
+  precision_weighted: 0.9822379827435005
+  recall_macro: 0.9691137824295193
+  recall_weighted: 0.9813
+  f1_macro: 0.9673204519119828
+  f1_weighted: 0.980348308535295
+  total_inference_time: 4.790967226028442
+  avg_batch_time: 0.9581934452056885
+  std_batch_time: 0.12554854682896638
+  throughput_samples_per_sec: 2087.261199715966
+  latency_per_sample_ms: 0.47909672260284425
+  initial_memory_mb: 12.5791015625
+  peak_memory_mb: 44.4326171875
+  avg_memory_mb: 43.85400390625
+  memory_overhead_mb: 31.853515625
+  num_active_experts: 32
+
+================================================================================
+MODEL STATISTICS:
+
+KAN Stats:
+  params_per_expert: 3728172
+  model_size_per_expert_mb: 14.251144409179688
+  available_experts: 32
+  total_expert_params: 119301504
+  router_params: 53408
+  total_system_params: 119354912
+
+MLP Stats:
+  params_per_expert: 5670444
+  model_size_per_expert_mb: 21.63885498046875
+  available_experts: 32
+  total_expert_params: 181454208
+  router_params: 53408
+  total_system_params: 181507616

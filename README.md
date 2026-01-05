@@ -211,7 +211,7 @@ Benchmarks were conducted on **10,000 randomized clinical samples** using identi
 
 | Evaluation Metric | MoE-KAN (Proposed) | MoE-MLP (Baseline) | Research Insight |
 |------------------|------------------|------------------|----------------|
-| Expert Parameters | ~410k | ~5.6M | KAN is **13.8× more parameter-efficient** |
+| Expert Parameters | ~3.72M | ~5.6M | KAN is **1.5× more parameter-efficient** |
 | Total System Params | 119.3M | 181.5M | 34% smaller system footprint |
 | Accuracy | 96.73% | 98.13% | MLP retains a slight +1.4% edge |
 | Weighted F1-Score | 0.9663 | 0.9803 | Strong rare-class performance for both |
